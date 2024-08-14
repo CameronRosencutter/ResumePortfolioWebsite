@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertical Navbar</title>
+    <link rel="stylesheet" href="projectstyles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="navbar" class="navbar">
+        <a href="javascript:void(0)" class="closebtn" onclick="toggleNavbar()">&times;</a>
+        <a href="#">About Me</a>
+        <a href="#">History</a>
+        <a href="#">Projects</a>
+        <a href="#">Contact Me</a>
+        <a href="#">Downloads</a>
+    </div>
+    <div id="main">
+        <span onclick="toggleNavbar()" class="openbtn" style="font-size:30px;cursor:pointer">&#9776;</span>
+        <div class="card-container">
+            <div class="card" onclick="openModal(this)" data-title="Card 1" data-description="SAFED is website that individuals can use to search a database for politicians in their area." data-date="July 2024 - August 2024" data-tools="HTML, CSS, and Javascript" data-location="https://safed-site.web.app/" data-image="./safed.png">
+                <img src="safed.png" alt="Image 1">
+                <h3>SAFED</h3>
+                <p>Search an online database!</p>
+            </div>
+            <div class="card" onclick="openModal(this)" data-title="Card 2" data-description="Short description for card 2." data-date="1496" data-tools="Chainsaw" data-location="Pluto" data-image="image2.png">
+                <img src="image2.png" alt="Image 2">
+                <h3>Card Title 2</h3>
+                <p>Short description for card 2.</p>
+            </div>
+            <div class="card" onclick="openModal(this)" data-title="Card 3" data-description="Short description for card 3." data-date="2023" data-tools="Hammer" data-location="Venus" data-image="image3.png">
+                <img src="image3.png" alt="Image 3">
+                <h3>Card Title 3</h3>
+                <p>Short description for card 3.</p>
+            </div>
+        </div>
+    
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <img id="modalImage" src="" alt="Modal Image">
+                <h2 id="modalTitle"></h2>
+                <p id="modalDescription"></p>
+                <p><strong>Date Done:</strong> <span id="modalDate"></span></p>
+                <p><strong>Tools Used:</strong> <span id="modalTools"></span></p>
+                <p><strong>Location:</strong> <span id="modalLocation"></span></p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

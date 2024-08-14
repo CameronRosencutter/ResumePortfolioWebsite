@@ -1,17 +1,18 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #1a1a1a;
+    font-family: "Kanit", sans-serif;
+    background: #1f1f1f;
 }
 
 .timeline-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
 
 .timeline {
-    width: 45%;
-    background-color: #f9f9f9;
+    color: white;
+    width: 40%;
+    background: #1f1f1f;
     padding: 20px;
     margin: 10px;
     border-radius: 8px;
@@ -21,6 +22,8 @@ body {
 
 .timeline-item {
     margin-bottom: 20px;
+    padding-bottom: 30px;
+    border-bottom: rgb(95, 95, 95) solid 1px;
 }
 
 .timeline h2 {

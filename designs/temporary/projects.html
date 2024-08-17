@@ -3,54 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vertical Navbar</title>
+    <title>Card with Modal Carousel</title>
     <link rel="stylesheet" href="projectstyles.css">
+    <link rel="stylesheet" href="summary.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="navbar" class="navbar">
-        <a href="javascript:void(0)" class="closebtn" onclick="toggleNavbar()">&times;</a>
-        <a href="#">About Me</a>
-        <a href="#">History</a>
-        <a href="#">Projects</a>
-        <a href="#">Contact Me</a>
-        <a href="#">Downloads</a>
-    </div>
-    <div id="main">
-        <span onclick="toggleNavbar()" class="openbtn" style="font-size:30px;cursor:pointer">&#9776;</span>
-        <div class="card-container">
-            <div class="card" onclick="openModal(this)" data-title="Card 1" data-description="SAFED is a website that individuals can use to search a database for politicians in their area." data-date="July 2024 - August 2024" data-tools="HTML, CSS, and JavaScript" data-location="https://safed-site.web.app/" data-image="safed.png">
-                <img src="safed.png" alt="Image 1">
-                <h3>SAFED</h3>
-                <p>Search an online database to find politicians in your area</p>
-            </div>
-            <div class="card" onclick="openModal(this)" data-title="Card 2" data-description="Short description for card 2." data-date="August 2023" data-tools="HTML, CSS, and Graphic Design" data-location="https://cameronrosencutter.github.io/HackSprint-Website/index.html" data-image="./image.png">
-                <img src="./image.png" alt="Image 2">
-                <h3>Bettys Breakfast Bistro</h3>
-                <p>A website for a make believe resturaunt</p>
-            </div>
-            <div class="card" onclick="openModal(this)" data-title="Card 3" data-description="Short description for card 3." data-date="2023" data-tools="Hammer" data-location="https://cameronrosencutter.github.io/Museum-of-Imagination/" data-image="./imagination.png">
-                <img src="./imagination.png" alt="Image 3">
-                <h3>The Museum of Imagination</h3>
-                <p>Short description for card 3.</p>
-            </div>
-            <!-- Add more cards as needed -->
+    <body>
+        <div id="navbar" class="navbar">
+            <a href="javascript:void(0)" class="closebtn" onclick="toggleNavbar()">&times;</a>
+            <a href="#">About Me</a>
+            <a href="#">History</a>
+            <a href="#">Projects</a>
+            <a href="#">Contact Me</a>
+            <a href="#">Downloads</a>
         </div>
+        <div id="main">
+            <span onclick="toggleNavbar()" class="openbtn" style="font-size:30px;cursor:pointer">&#9776;</span>
+            <div class="summary">
+                <h1>Projects</h1>
+                <h2>Please explore my own collection of my work, where creativity meets functionality. As a passionate web designer and graphic artist, I like to combine visual appeal with understandable functionality to create the best work possible. From visually striking websites to engaging graphic designs, each project reflects my dedication to quality and creativity.</h2>
+                <h1>What you'll find:</h1>
+                <h2>Web Design Projects: Dive into a selection of websites I've designed, showcasing my expertise in creating intuitive and visually compelling online experiences.</h2>
+                <h2>Graphic Design Creations: Discover a range of graphic design work, including branding, illustrations, and more, demonstrating my ability to translate concepts into eye-catching visuals.</h2>
+                <h2>Video Production: Observe videos that are intended to explain concepts that are difficult to explain in words or text.</h2>
+                <h2>Feel free to browse through my projects and get in touch if you're interested in collaborating or learning more about my work.</h2>
+            </div>
+            <div class="card-container">
+                <div class="card" onclick="openModal(this)" data-title="Card 1" data-description="SAFED is website that individuals can use to search a database for politicians in their area." data-date="July 2024 - August 2024" data-tools="HTML, CSS, and Javascript" data-location="https://safed-site.web.app/" data-image="./safed.png" data-images='["./images/safed/safed.png", "./images/safed/safed2.png", "./images/safed/safed3.png"]'>
+                    <img src="./images/safed/safed.png" alt="Image 1">
+                    <h3>SAFED</h3>
+                    <p>Search an online database!</p>
+                </div>
+                <div class="card" onclick="openModal(this)" data-title="Card 2" data-description="Short description for card 2." data-date="1496" data-tools="Chainsaw" data-location="Pluto" data-image="image2.png" data-images='["image2_1.png", "image2_2.png", "image2_3.png"]'>
+                    <img src="image2.png" alt="Image 2">
+                    <h3>Card Title 2</h3>
+                    <p>Short description for card 2.</p>
+                </div>
+                <div class="card" onclick="openModal(this)" data-title="Card 3" data-description="Short description for card 3." data-date="2023" data-tools="Hammer" data-location="Venus" data-image="image3.png" data-images='["image3_1.png", "image3_2.png", "image3_3.png"]'>
+                    <img src="image3.png" alt="Image 3">
+                    <h3>Card Title 3</h3>
+                    <p>Short description for card 3.</p>
+                </div>
+            </div>
     
-        <div id="modal" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal()">&times;</span>
-                <img id="modalImage" src="" alt="Modal Image">
-                <h2 id="modalTitle"></h2>
-                <p id="modalDescription"></p>
-                <p><strong>Date Done:</strong> <span id="modalDate"></span></p>
-                <p><strong>Tools Used:</strong> <span id="modalTools"></span></p>
-                <p><strong>URL:</strong> <span id="modalLocation"></span></p>
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <div class="carousel">
+                        <img id="modalImage1" src="" alt="Modal Image">
+                        <img id="modalImage2" src="" alt="Modal Image">
+                        <img id="modalImage3" src="" alt="Modal Image">
+                        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+                        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+                    </div>
+                    <h2 id="modalTitle"></h2>
+                    <p id="modalDescription"></p>
+                    <p><strong>Date Done:</strong> <span id="modalDate"></span></p>
+                    <p><strong>Tools Used:</strong> <span id="modalTools"></span></p>
+                    <p><strong>Location:</strong> <span id="modalLocation"></span></p>
+                </div>
             </div>
         </div>
-    </div>
     <script src="script.js"></script>
+    <script src="modal.js"></script>
 </body>
 </html>

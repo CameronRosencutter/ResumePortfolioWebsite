@@ -149,7 +149,7 @@ body {
 }
 
 .card:hover {
-    outline: 0.01px solid #ccc;
+    outline: solid #33b1d8 1px;
     transform: scale(1.04);
 }
 
